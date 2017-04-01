@@ -1,0 +1,23 @@
+{
+  "name": "gilt-exercise",
+  "version": "1.0.0",
+  "description": "Exercise for Gilt JP",
+  "main": "gilt.js",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elanmajkrzak/gilt.git"
+  },
+  "author": "elan.majkrzak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elanmajkrzak/gilt/issues"
+  },
+  "homepage": ""
+}

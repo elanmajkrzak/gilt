@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="gilt">
+	<head>
+		<meta charset="UTF-8"></head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="SalesController.js"></script>
+	</head>
+	<body ng-controller="SalesController">
+		<div ng-repeat="sale in sales">
+		  <p>Name: {{ sale.name }}</p>
+		  <p>Description: {{ sale.description }}</p>
+		  <p>Ends at: {{ sale.lifetime.ends_at | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+		  <p>Image url: {{sale.url}}</p>
+		  <br/>
+		</div>
+	</body>
+</html>
