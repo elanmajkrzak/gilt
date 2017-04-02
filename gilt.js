@@ -11,9 +11,20 @@ app.use(function(req, res, next) {
 app.get('/gilt', function(req, res){
 
 	var sales = JSON.parse(fs.readFileSync("sales.json"));
+	var activeSales = [];
+
+	sales.forEach(function(sale) {
+		var begins_at = new Date(sale.lifetime.begins_at);
+		var current_at = new Date("2016-09-27T17:09:07.000Z");
+		var ends_at = new Date(sale.lifetime.ends_at);
+		if (begins_at.getTime() <= current_at.getTime() &&
+			 ends_at.getTime() >= current_at.getTime()) {
+			activeSales.push(sale);
+		}
+	});
 
   	console.log('recieved request');
-	res.send(sales);
+	res.send(activeSales);
 });
 
 app.listen('8081');
