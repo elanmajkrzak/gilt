@@ -19,11 +19,20 @@ app.get('/gilt', function(req, res){
 		var ends_at = new Date(sale.lifetime.ends_at);
 		if (begins_at.getTime() <= current_at.getTime() &&
 			 ends_at.getTime() >= current_at.getTime()) {
-			activeSales.push(sale);
+			var imgSRC = sale.images.url_template.toString();
+			imgSRC = imgSRC.replace("{NAME}", "default");
+			imgSRC = imgSRC.replace("{WIDTH}", "300");
+			imgSRC = imgSRC.replace("{RATIO}", sale.images.available.default.ratios[0]);
+
+			var params = '{' +
+					'"name":"'+sale.name+'",' +
+					'"ends_at":"'+sale.lifetime.ends_at+'",' +
+					'"url":"'+imgSRC+'"' +
+				'}';
+			activeSales.push(JSON.parse(params));
 		}
 	});
 
-  	console.log('recieved request');
 	res.send(activeSales);
 });
 

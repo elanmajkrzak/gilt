@@ -3,6 +3,14 @@ angular.module("gilt", [])
   $http.get("http://localhost:8081/gilt")
     .then(function(response) {
         $scope.sales = response.data;
-        console.log($scope.sales)
     });
-}]);
+}])
+.directive('backImg', function(){
+    return function(scope, element, attrs){
+        var url = attrs.backImg;
+        element.css({
+            'background-image': 'url(' + url +')',
+            'background-size' : 'cover'
+        });
+    };
+});
