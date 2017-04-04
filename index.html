@@ -7,12 +7,13 @@
 		<script src="SalesController.js"></script>
 	</head>
 	<body ng-controller="SalesController">
-		<table>
+		<table class="mainTable">
 			<tr ng-repeat="sale in sales" class="saleRow">
 				<td class="saleColumn">
-					<div back-img="{{sale.url}}" ng-width="{{sale.width}}">
-						<p>Name: {{ sale.name }}</p>
-						<p>Ends at: {{ sale.ends_at | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+					<div class="backImg" back-img="{{sale.url}}" width="{{sale.width}}" height="{{sale.height}}">
+						<div>Name: {{ sale.name }}</div>
+						<div>Ends at: {{ sale.ends_at | date:"MM/dd/yyyy 'at' h:mma"}}</div>
+						<div>Width: {{ sale.width }}</div>
 					</div>
 				</td>
 			  <br/>

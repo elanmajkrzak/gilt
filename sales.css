@@ -1,7 +1,27 @@
-.salesRow {
-	text-align: center; 
+/*.mainTable {
+	margin:0 auto;
+	width:100%;
 }
 
+.saleRow {
+	margin:0 auto;
+	width:100%;
+}*/
+
 .saleColumn {
-	text-align: center; 
+    position:relative;
+	margin:0 auto;
+	width:100%;
+}
+
+.imgSizer {
+	vertical-align: top;
+	width: 100%;
+	opacity: 0;
+}
+
+.backImg {
+    background-position : 50%;
+    background-size : 100%;
+    background-repeat : no-repeat;
 }
