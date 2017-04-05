@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="gilt">
 	<head>
-		<meta charset="UTF-8"></head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="sales.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="SalesController.js"></script>
@@ -10,10 +11,8 @@
 		<table class="mainTable">
 			<tr ng-repeat="sale in sales" class="saleRow">
 				<td class="saleColumn">
-					<div class="backImg" back-img="{{sale.url}}" width="{{sale.width}}" height="{{sale.height}}">
-						<div>Name: {{ sale.name }}</div>
-						<div>Ends at: {{ sale.ends_at | date:"MM/dd/yyyy 'at' h:mma"}}</div>
-						<div>Width: {{ sale.width }}</div>
+					<div class="backImg" back-img="{{sale.url}}">
+						<div class="saleText">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
 					</div>
 				</td>
 			  <br/>

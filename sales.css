@@ -1,27 +1,26 @@
-/*.mainTable {
-	margin:0 auto;
-	width:100%;
+.mainTable {
+	margin-left: auto;
+	margin-right: auto;
 }
-
-.saleRow {
-	margin:0 auto;
-	width:100%;
-}*/
 
 .saleColumn {
     position:relative;
-	margin:0 auto;
 	width:100%;
-}
-
-.imgSizer {
-	vertical-align: top;
-	width: 100%;
-	opacity: 0;
 }
 
 .backImg {
     background-position : 50%;
     background-size : 100%;
     background-repeat : no-repeat;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: relative;
+}
+
+.saleText {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	font-family: Century Gothic, sans-serif;
+	background-color: rgba(0, 0, 0, 0.25);
 }
