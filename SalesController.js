@@ -1,4 +1,4 @@
-angular.module("gilt", [])
+angular.module("gilt", ['ngMaterial'])
 .controller('SalesController', ['$scope', '$http', function($scope,$http) {
     var url = "http://localhost:8081/gilt";
     $http.get(url)
@@ -13,11 +13,7 @@ angular.module("gilt", [])
         var ratio;
         var height;
 
-        if (width >= 910) {
-            width = 900;
-            height = 325;
-            ratio = 2.769;
-        } else if (width >= 650) {
+        if (width >= 650) {
             width = 620;
             height = 280;
             ratio = 2.957;
@@ -40,8 +36,8 @@ angular.module("gilt", [])
         url = url.replace("{RATIO}", ratio);
         element.css({
             'background-image': 'url(' + url +')',
-            'width': width+'px',
-            'height': height+'px'
+            'min-width': width+'px',
+            'min-height': height+'px'
         });
     };
 });
