@@ -10,12 +10,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-
 		<script src="SalesController.js"></script>
 	</head>
-	<body layout="row" ng-controller="SalesController">
-		<div layout="column" layout-align="center center">
-			<div ng-repeat="sale in sales" class="backImg" back-img="{{sale.url}}">
+	<body ng-controller="SalesController" layout="row" layout-align="center center">
+		<div class="salesContainer" layout="row" layout-align="center center" layout-wrap>
+			<div class="backImg" back-img="{{sale.url}}" layout="column" layout-align="end start"  ng-repeat="sale in sales" flex="none">
 				<div class="saleText">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
 			</div>
 		</div>

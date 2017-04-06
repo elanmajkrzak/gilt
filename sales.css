@@ -1,16 +1,17 @@
+.salesContainer {
+	height: 100%;
+	width: 980px;
+}
+
 .backImg {
-    background-position : 50%;
+    background : rgba(0, 0, 0, 0.5) no-repeat 50%;
     background-size : 100%;
-    background-repeat : no-repeat;
-	background-color: rgba(0, 0, 0, 0.5);
-	position: relative;
+	min-width: 295px;
+	min-height: 202px;
 }
 
 .saleText {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 10px;
 	font-family: Century Gothic, sans-serif;
 	background-color: rgba(0, 0, 0, 0.25);
+	padding:10px;
 }
