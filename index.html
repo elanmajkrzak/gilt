@@ -13,7 +13,7 @@
 	</head>
 	<body ng-controller="SalesController">
 		<md-content layout-padding>
-			<md-grid-list md-cols-gt-lg="5" md-cols-lg="4" md-cols-md="3" md-cols-sm="2" md-cols-xs="1" md-row-height="203px">
+			<md-grid-list md-cols-gt-lg="5" md-cols-lg="4" md-cols-md="3" md-cols-sm="2" md-cols-xs="1" md-row-height="295:203">
 				<md-grid-tile ng-repeat="sale in sales" md-colspan="1">
 					<div ng-style="{'background-image': 'url({{sale.url}})'}" class="imgContainer">
 						<div class="saleText">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
