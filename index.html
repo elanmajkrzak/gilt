@@ -2,7 +2,6 @@
 <html ng-app="gilt">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="sales.css">
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -12,11 +11,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 		<script src="SalesController.js"></script>
 	</head>
-	<body ng-controller="SalesController" layout="row" layout-align="center center">
-		<div class="salesContainer" layout="row" layout-align="center center" layout-wrap>
-			<div class="backImg" back-img="{{sale.url}}" layout="column" layout-align="end start"  ng-repeat="sale in sales" flex="none">
-				<div class="saleText">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
-			</div>
-		</div>
+	<body ng-controller="SalesController">
+		<md-content layout-padding>
+			<md-grid-list md-cols-gt-lg="5" md-cols-lg="4" md-cols-md="3" md-cols-sm="2" md-cols-xs="1" md-row-height="203px">
+				<md-grid-tile ng-repeat="sale in sales" md-colspan="1">
+					<div ng-style="{'background-image': 'url({{sale.url}})'}" class="imgContainer">
+						<div class="saleText">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
+					</div>
+				</md-grid-tile>
+			</md-grid-list>
+		</md-content>
 	</body>
 </html>

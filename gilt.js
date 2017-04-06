@@ -17,13 +17,20 @@ app.get('/gilt', function(req, res){
 		var begins_at = new Date(sale.lifetime.begins_at);
 		var current_at = new Date("2016-09-27T17:09:07.000Z");
 		var ends_at = new Date(sale.lifetime.ends_at);
+        var width = 295;
+        var ratio = 1.457;
+		var url = sale.images.url_template;
+
+        url = url.replace("{NAME}", "default");
+        url = url.replace("{WIDTH}", width);
+        url = url.replace("{RATIO}", ratio);
 
 		if (begins_at.getTime() <= current_at.getTime() &&
 			 ends_at.getTime() >= current_at.getTime()) {
 			var params = '{' +
 					'"name":"'+sale.name+'",' +
 					'"ends_at":"'+sale.lifetime.ends_at+'",' +
-					'"url":"'+sale.images.url_template+'",' +
+					'"url":"'+url+'",' +
 					'"ratios":"'+sale.images.available.default.ratios.toString() +'"' +
 				'}';
 			activeSales.push(JSON.parse(params));

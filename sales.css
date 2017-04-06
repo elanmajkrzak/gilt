@@ -1,17 +1,10 @@
-.salesContainer {
-	height: 100%;
-	width: 980px;
-}
-
-.backImg {
-    background : rgba(0, 0, 0, 0.5) no-repeat 50%;
-    background-size : 100%;
-	min-width: 295px;
-	min-height: 202px;
-}
-
 .saleText {
 	font-family: Century Gothic, sans-serif;
 	background-color: rgba(0, 0, 0, 0.25);
 	padding:10px;
+}
+
+.imgContainer {
+	width:295px;
+	height: 203px;
 }
