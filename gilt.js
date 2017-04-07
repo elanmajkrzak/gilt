@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const app = express();
 
 app.use(function(req, res, next) {
@@ -8,8 +9,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(express.static(path.join(__dirname + '/public')));
+
 app.get('/', function(req, res){
-	res.sendFile(__dirname+'/index.html');
+	res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 app.get('/gilt', function(req, res){
