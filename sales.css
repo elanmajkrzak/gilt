@@ -1,7 +1,10 @@
 .saleText {
-	font-family: Century Gothic, sans-serif;
-	background-color: rgba(0, 0, 0, 0.25);
 	padding:10px;
+	width: 100%;
+	text-align: center;
+	font-family: Century Gothic, sans-serif;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: rgba(255, 255, 255, 1);
 }
 
 .imgContainer {
