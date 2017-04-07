@@ -53,6 +53,6 @@ app.get('/gilt', function(req, res){
 	res.send(activeSales);
 });
 
-app.listen('8081', '127.0.0.1');
+app.listen('8081');
 
 exports = module.exports = app;
