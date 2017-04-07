@@ -8,6 +8,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/', function(req, res){
+	res.sendFile(__dirname+'/index.html');
+});
+
 app.get('/gilt', function(req, res){
 
 	var sales = JSON.parse(fs.readFileSync("sales.json"));
@@ -46,6 +50,6 @@ app.get('/gilt', function(req, res){
 	res.send(activeSales);
 });
 
-app.listen('8081');
+app.listen('8081', '127.0.0.1');
 
 exports = module.exports = app;
