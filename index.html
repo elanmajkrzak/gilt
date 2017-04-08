@@ -13,10 +13,17 @@
 	</head>
 	<body ng-controller="SalesController">
 		<md-content>
-			<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-lg="4" md-cols="5" md-row-height="295:203">
+			<md-toolbar>
+				<div class="gilt-toolbar md-toolbar-tools">
+					<md-icon md-svg-src="/logo.svg" class="logo"></md-icon>
+
+					<h2 layout-padding flex md-truncate>Current Sales</h2>
+				</div>
+			</md-toolbar>
+			<md-grid-list md-cols-xs="1" md-cols-md="2" md-cols-lg="4" md-cols="5" md-row-height="295:203">
 				<md-grid-tile ng-repeat="sale in sales">
 					<div ng-style="{'background-image': 'url({{sale.url}})'}" class="imgContainer" layout="row" layout-align="center end">
-						<div class="saleText">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
+						<div class="saleText md-body-2">{{ sale.name }}<br/>末文 {{ sale.ends_at | date:"MM月dd日HH:mm時間"}}</div>
 					</div>
 				</md-grid-tile>
 			</md-grid-list>
