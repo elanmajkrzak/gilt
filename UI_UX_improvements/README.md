@@ -7,8 +7,8 @@ Note that this design is currently only targeting desktop resolutions (1920x1080
 ## Text contrast and Readability ##
 On the live site, future sales are listed with grey text on a white background.
 
-![picture alt](http://imgur.com/fTP99qV "Live future sales")
+![Live sales](http://imgur.com/fTP99qV.png "Live future sales")
 
 Following the [Web Content Accessibility Guidlines (WCAG)](https://www.w3.org/WAI/intro/wcag) text of medium to large size should have a color contrast of 3:1, and text of small size should be a color contrast of 4.5:1. Currently the text for "Future Sales" and the dates that are unselected do not meet these guidelines, as shown in the contrast analysis in the image below (the text should be readable in white). I would suggest either introducing a darker background for the text, or keep the current backgrounds and use a darker font.
 
-![picture alt](http://imgur.com/ksLPZZx "4.5:1 Level AA WCAG color contrast analysis")
+![Color contrast analysis](http://imgur.com/ksLPZZx.png "4.5:1 Level AA WCAG color contrast analysis")
